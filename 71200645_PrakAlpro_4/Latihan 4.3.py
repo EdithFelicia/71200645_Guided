@@ -1,5 +1,5 @@
-fahrenheit = lambda celcius: "F = " + str(int((9/5) * celcius + 32))
-reamur = lambda celcius: "R = " + str(int(0.8 * celcius))
+fahrenheit = lambda celcius: int((9/5) * celcius + 32)
+reamur = lambda celcius: int(0.8 * celcius)
 
 celcius1 = 100
 fahrenheit1 = fahrenheit(celcius1)
