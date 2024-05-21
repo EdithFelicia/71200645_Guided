@@ -73,13 +73,22 @@
 # print(kata)
 # print(kata[1]) # error: tidak bisa diakses lewat index
 
+# for i in kata:
+#     print(i)
+
 # kata = set(["Kasih", "Yesus", "Selamanya"])
 # print(type(kata))
 
 # kata2 = set(("Hidup", "Kekal", "Surga"))
 # print(type(kata2))
 
-
+# simpan = {"a", "b", 1, 5, "c"}
+# simpan.add("d") # hanya bisa menambah satu data
+# # simpan.remove(2) # error 
+# simpan.remove("b")
+# simpan.discard(2) # tidak ada error
+# simpan.discard(5)
+# print(simpan)
 
 # def hitung_daerah(daftar):
 #     daerah_unik = set(daftar)  # Mengubah list menjadi set untuk menghapus duplikasi
@@ -91,3 +100,33 @@
 # print("Daerah yang diwakili:", daerah_unik)
 # print("Jumlah daerah:", jumlah_daerah)
 
+
+set_1 = {"Hello", "Jesus", 3}
+# set_2 = {"Bapa", "Putra", "Roh Kudus"}
+# set_gabung = set_1.union(set_2)
+# print(set_gabung)
+# set_gabung_2 = set_1 | set_2
+# print(set_gabung_2)
+
+# set_3 = {"Bumi", "Surga", "Neraka"}
+# set_1.update(set_3)
+# print(set_1)
+
+set_4 = {"Jesus", "Manusia", "Bapa"}
+# set_iris = set_1.intersection(set_4)
+# print(set_iris)
+
+# set_iris = set_1 & set_4
+# print(set_iris)
+
+# set_selisih = set_1.difference(set_4)
+# print(set_selisih)
+
+# set_selisih = set_1 - set_4
+# print(set_selisih)
+
+set_baru = set_1.symmetric_difference(set_4)
+print(set_baru)
+
+# set_baru = set_1 ^ set_4
+# print(set_baru)
