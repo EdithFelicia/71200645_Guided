@@ -1,110 +1,60 @@
-# import re
+import re
 # RE.FINDALL
-# pattern = r'\d+'
-# text = 'The numbers are 12, 34, and 56.'
+# pola = r"\d+"
+# teks = "Sekarang umurmu sudah 21, ya! Sampai jumpa di tahun 2025"
 
-# matches = re.findall(pattern, text)
-# print("Matches found:", matches)
+# angka = re.findall(pola, teks)
+# print("Angka:", angka)
 # Kecocokan dikembalikan dalam bentuk list
 
 # RE.FINDITER
-# pattern = r'\d+'
-# text = 'The numbers are 12, 34, and 56.'
+# pola = r"\d+"
+# teks = "Sekarang umurmu sudah 21, ya! Sampai jumpa di tahun 2025"
 
-# matches = re.finditer(pattern, text)
-# for match in matches:
-#     print("Match found:", match.group())
+# angka = re.finditer(pola, teks)
+# for i in angka:
+#     print("Angka:", i.group())
 
 # RE.SUB
-# pattern = r'\d+'
-# replacement = '#'
-# text = 'My phone number is 12345.'
+# pola = r"\d+"
+# pengganti = "Sampai jumpa!"
+# teks = "Jangan lupa telepon, ya! 56486032"
 
-# result = re.sub(pattern, replacement, text)
-# print("Replaced text:", result)
+# hasil = re.sub(pola, pengganti, teks)
+# print("Kata-kata terakhir:", hasil)
 
 # RE.FULLMATCH
-# pattern = r'[a-zA-Z]+'
-# text = 'Hello'
+# pola = r"[a-zA-Z]+"
+# teks = "Hello"
 
-# match = re.fullmatch(pattern, text)
-# if match:
-#     print("Full match found:", match.group())
+# hasil = re.fullmatch(pola, teks)
+# if hasil:
+#     print("sesuai:", hasil.group())
 # else:
-#     print("No full match")
+#     print("Tidak ada yang sama")
     
 # RE.SPLIT
-# pattern = r'\s+'
-# text = 'Split   this  sentence   into words.'
+# pola = r"\s+"
+# teks = "Aku   melihat Surga   terbuka  dan Anak Allah   duduk di sebelah   kanan Bapa."
 
-# result = re.split(pattern, text)
-# print("Split text:", result)
+# hasil = re.split(pola, teks)
+# print("Kata terpisah:", hasil)
 
 # RE.COMPILE
-# pattern = r'\d+'
-# compiled_pattern = re.compile(pattern)
+# pola = r"\d+"
+# kompilasi_pola = re.compile(pola)
 
-# text1 = 'There are 123 apples.'
-# text2 = 'There are 456 oranges.'
+# teks1 = "Pola yang sama dalam 2 teks"
+# teks2 = "Hello angka 3126, selamat pagi!"
 
-# matches1 = compiled_pattern.findall(text1)
-# matches2 = compiled_pattern.findall(text2)
+# sama1 = kompilasi_pola.findall(teks1)
+# sama2 = kompilasi_pola.findall(teks2)
 
-# print("Matches in text1:", matches1)
-# print("Matches in text2:", matches2)
+# print("Kesamaan pola teks1:", sama1)
+# print("Kesamaan pola teks2:", sama2)
 
 # RE.ESCAPE
-# text = 'This is a test. Use * and $ symbols.'
-# escaped_text = re.escape(text)
-# print("Escaped text:", escaped_text)
-
-
-# import re
-
-# def sensor_komentar(kalimat, terlarang, pengganti):
-#     x = re.sub(terlarang, pengganti, kalimat)
-#     return x
-
-# kalimat = 'jancuk! aku dikibuli toko online.'
-# terlarang = 'jancuk'
-# pengganti = 'wkwkwk'
-# print(sensor_komentar(kalimat, terlarang, pengganti))
-
-import re
-
-def validasi_kartu_kredit(nomor_kartu):
-    if len(nomor_kartu) == 16:
-        hasil = re.search("[^1237890]", nomor_kartu)
-        huruf = re.search("[a-zA-Z]", nomor_kartu)
-        if hasil and re.search("8888", nomor_kartu) and not huruf:
-            return "Valid Platinum"
-        if hasil and not huruf:
-            return "Valid Reguler"
-        else:
-            return "Tidak valid"    
-    else:
-        return "Tidak valid"
-
-nomor_kartu = '4234567888823456'
-hasil = validasi_kartu_kredit(nomor_kartu)
-print(hasil)
-
-nomor_kartu = '42345678apa88823'
-hasil = validasi_kartu_kredit(nomor_kartu)
-print(hasil)
-
-nomor_kartu = '411111111111111'
-hasil = validasi_kartu_kredit(nomor_kartu)
-print(hasil)
-
-nomor_kartu = '811111111111111'
-hasil = validasi_kartu_kredit(nomor_kartu)
-print(hasil)
-
-# baris ini jangan dihapus walaupun anda tidak menggunakan regex
-# harus 16 digit angka
-# harus diawali dengan 4/5/6
-# jika ada angka 8 minimal 4 kali berdekatan, maka platinum
-# tidak valid, reguler, platinum
-
+# teks = "Menambahkan simbol \ pada kata sebelum spasi dalam teks"
+# tambah_escaped = re.escape(teks)
+# print("Escaped teks:", tambah_escaped)
        
